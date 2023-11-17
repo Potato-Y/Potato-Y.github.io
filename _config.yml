@@ -107,7 +107,7 @@ author:
   name             : "Potato-Y"
   avatar           : "/assets/images/profile_image.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "My study history. 📖"
-  location         : "South Korea"
+  location         : "South Korea"
   email            :
   links:
     - label: "Email"
