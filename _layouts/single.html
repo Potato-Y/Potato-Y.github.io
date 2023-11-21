@@ -68,6 +68,13 @@ layout: default
     {% endif %}
   </article>
 
+  <!-- Giscus 댓글 영역 -->
+  <script src="https://giscus.app/client.js" data-repo="Potato-Y/Potato-Y.github.io" data-repo-id="R_kgDOKujIlg"
+    data-category="Comments" data-category-id="DIC_kwDOKujIls4CbIDp" data-mapping="pathname" data-strict="0"
+    data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light_protanopia"
+    data-lang="ko" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
     <div class="page__related">
