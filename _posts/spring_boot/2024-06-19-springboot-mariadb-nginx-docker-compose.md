@@ -178,6 +178,7 @@ services:
     depends_on:
       - maria-db
       - smtp-mailhog
+    restart: on-failure
     networks:
       - dadogk_network
 
@@ -236,6 +237,7 @@ networks:
     depends_on: # 해당 컨테이너가 먼저 시작되어야 한다.
       - maria-db
       - smtp-mailhog
+    restart: on-failure # 실패한 경우 재실행
     networks: # dadogk_network 네트워크에 연결한다.
       - dadogk_network
 ```
@@ -267,6 +269,7 @@ networks:
 
       - JWT_ISSUER=???
       - JWT_SECRET_KEY=???
+    restart: on-failure
     networks:
       - dadogk_network
 ```
