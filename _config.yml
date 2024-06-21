@@ -108,11 +108,11 @@ author:
   avatar           : "/assets/images/profile_image.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "My study history. 📖"
   location         : "South Korea"
-  email            :
+  email            : "dev.potatoy@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:projectpotatoy@gmail.com"
+      # url: "mailto:dev.potatoy@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-github"
       # url: "https://github.com/Potato-Y"
