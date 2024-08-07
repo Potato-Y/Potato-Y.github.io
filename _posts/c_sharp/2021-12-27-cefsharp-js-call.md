@@ -5,7 +5,7 @@ toc: true
 toc_sticky: true
 
 categories:
-    - C#
+    - C_Sharp
 tags:
     - C#
     - JavaScript
