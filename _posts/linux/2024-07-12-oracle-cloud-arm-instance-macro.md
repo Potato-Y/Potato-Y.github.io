@@ -200,17 +200,55 @@ oci iam compartment list -c [앞에서 찾은 tenancy 값] --all
  --ssh-authorized-keys-file /home/ubuntu/oracle/[ssh-key.key.pub]
 ```
 
+> 대괄호를 포함하여 값을 변경하도록 한다.
+
 이제 `~/`로 이동해서 로그를 남길 파일을 하나 생성한다. 
 
 ```bash
 cd ~/
 touch oci.log
 ```
-
-마지막으로 크론탭 설정을 한다.
+`
+마지막으로 크론탭 설정을 한다. 크론탭 설정은 `crontab -e` 명령어를 통해 접근할 수 있다.
 
 ```bash
-* * * * * /bin/bash /home/ubuntu/.oci/macro2.sh >> /home/ubuntu/oci.log 2>&1
+* * * * * /bin/bash /home/ubuntu/.oci/macro.sh >> /home/ubuntu/oci.log 2>&1
+```
+해당 구문의 내용은 bash 쉘을 사용하여 `macro.sh`를 실행하고, `oci.log` 파일에 결과를 출력되도록 하는 것이다.
+
+위와 같이 설정을 완료하면 1분마다 `macro.sh` 스크립트가 실행된다. 로그 기록은 `2>&1`를 통해 표준 출력과 오류 메시지가 모두 `oci.log` 파일에 기록된다. 때문에 정상 작동을 했다면 보통은 arm 인스턴스 자리가 없어 오류 메시지가 남게 된다. 만약 다른 방법으로 확인하고 싶다면, 매크로가 시작될 쯤 Oracle Cloud 홈페이지에서 인스턴스 생성을 시도하면 `Too many requests for the user` 라는 오류를 하단에 반환한다.
+
+만약 실패할 경우 다음의 형식의 오류 메시지가 남겨진다.
+
+```js
+ServiceError:
+{
+    "client_version": "Oracle-PythonSDK/2.129.2, Oracle-PythonCLI/3.44.2",
+    "code": "InternalError",
+    "logging_tips": "Please run the OCI CLI command using --debug flag to find more debug information.",
+    "message": "Out of host capacity.",
+    "opc-request-id": "-",
+    "operation_name": "launch_instance",
+    "request_endpoint": "POST -",
+    "status": 500,
+    "target_service": "compute",
+    "timestamp": "-",
+    "troubleshooting_tips": "See [https://docs.oracle.com/iaas/Content/API/References/apierrors.htm] for more information about resolving this error. If you are unable to resolve this issue, run this CLI command with --debug option and contact Oracle support and provide them the full error message."
+}
 ```
 
-이제 1분마다 인스턴스 생성을 시도하고, 성공 여부를 로그를 통해 확인할 수 있다.
+성공한 적이 없어 성공에 대한 메시지는 필자도 모른다.
+
+만약 매크로가 시작될 때 매크로가 실행된건지 여부가 궁금하다면 다음과 같이 출력 문구를 추가한다.
+
+`macro.sh`
+```bash
+#!/bin/bash
+
+echo start
+
+/home/ubuntu/bin/oci compute instance launch \
+... (이후 생략)
+```
+
+이렇게 상단에 `echo start`를 추가하면 매크로가 시작됨과 동시에 로그 파일에 start 라는 문구가 남게 된다.
