@@ -152,6 +152,8 @@ Config written to /home/potato/.oci/config
 oci iam compartment list -c [앞에서 찾은 tenancy 값] --all
 ```
 
+> 대괄호를 포함하여 값을 변경하도록 한다.
+
 정상 작동을 확인한 다음에 `~/.oci` 위치에서 아래와 같이 여러 파일을 생성한다.
 
 `availabilityConfig.json`
