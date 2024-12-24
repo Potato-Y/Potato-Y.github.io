@@ -748,5 +748,7 @@ public class PostApiController {
 
 ## 참고
 
+[GitHub 전체 코드](https://github.com/Potato-Y/springboot-aws-s3-cloudfront-ex/tree/8048275b361e4b45558a6a602cc33e9c7c8af511)
+
 [Spring Boot와 CDN을 연결해보자! (1) — cloudFront를 활용한 이미지 캐싱](https://medium.com/@hee98.09.14/spring-boot%EC%99%80-cdn%EC%9D%84-%EC%97%B0%EA%B2%B0%ED%95%B4%EB%B3%B4%EC%9E%90-1-cloudfront%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%BA%90%EC%8B%B1-c29cc0f3cbdd)
 [AWS CloudFront에 Signed URLs 적용하기](https://velog.io/@leehaeun0/AWS-CloudFront%EC%97%90-Signed-URLs-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
