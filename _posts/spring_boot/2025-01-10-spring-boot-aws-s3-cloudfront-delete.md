@@ -100,6 +100,8 @@ public class PostApiController {
 
 이제 해당 api를 테스트한 뒤에 AWS S3 버킷을 확인해 보면 관련 객체들이 삭제된 것을 확인할 수 있다.
 
+위 코드가 담겨있는 저장소: https://github.com/Potato-Y/springboot-aws-s3-cloudfront-ex/tree/dc6646f8b57e4dd165a48e83286713b22e826541
+
 <img width="780" alt="image" src="https://github.com/user-attachments/assets/0bbd678b-a358-4bc6-89ec-87e02e0c09dc" />
 
 <img width="678" alt="image" src="https://github.com/user-attachments/assets/abba8998-f551-45db-86a6-437b45809105" />
