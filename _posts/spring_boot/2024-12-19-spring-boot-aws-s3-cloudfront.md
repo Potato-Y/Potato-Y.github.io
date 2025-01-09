@@ -746,6 +746,8 @@ public class PostApiController {
 
 이번 게시글에서는 S3 버킷에 파일을 업로드를 하고, 조회하는 방법을 확인했다. 다음에는 게시글이 삭제될 때 S3 객체도 함께 삭제하는 내용을 작성해 보고자 한다.
 
+[Spring boot - AWS S3 객체 삭제하기](https://potato-y.github.io/springboot/spring-boot-aws-s3-cloudfront-delete/)
+
 ## 참고
 
 [GitHub 전체 코드](https://github.com/Potato-Y/springboot-aws-s3-cloudfront-ex/tree/8048275b361e4b45558a6a602cc33e9c7c8af511)
