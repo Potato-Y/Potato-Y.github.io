@@ -1,5 +1,5 @@
 ---
-title: "Spring boot AWS S3 + CloudFront 서명된 URL 사용하기 1"
+title: "Spring boot AWS S3 + CloudFront 서명된 URL 사용하기"
 
 toc: true
 toc_sticky: true
