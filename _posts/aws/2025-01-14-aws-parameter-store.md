@@ -110,7 +110,7 @@ $ aws ssm get-parameter --name /test/spring/id
         "Value": "test",
         "Version": 1,
         "LastModifiedDate": "2025-01-13T22:48:18.164000+09:00",
-        "ARN": "arn:aws:ssm:ap-northeast-2:339712697347:parameter/test/spring/id",
+        "ARN": "arn:aws:ssm:ap-northeast-2:-:parameter/test/spring/id",
         "DataType": "text"
     }
 }
@@ -128,14 +128,14 @@ $ aws ssm get-parameter --name /test/spring/id
         "Value": "test",
         "Version": 1,
         "LastModifiedDate": "2025-01-13T22:48:18.164000+09:00",
-        "ARN": "arn:aws:ssm:ap-northeast-2:339712697347:parameter/test/spring/id",
+        "ARN": "arn:aws:ssm:ap-northeast-2:-:parameter/test/spring/id",
         "DataType": "text"
     }
 }
 
 $ aws ssm get-parameter --name /test/spring2/id
 
-An error occurred (AccessDeniedException) when calling the GetParameter operation: User: arn:aws:iam::339712697347:user/github-action is not authorized to perform: ssm:GetParameter on resource: arn:aws:ssm:ap-northeast-2:339712697347:parameter/test/spring2/id because no identity-based policy allows the ssm:GetParameter action
+An error occurred (AccessDeniedException) when calling the GetParameter operation: User: arn:aws:iam::-:user/github-action is not authorized to perform: ssm:GetParameter on resource: arn:aws:ssm:ap-northeast-2:-:parameter/test/spring2/id because no identity-based policy allows the ssm:GetParameter action
 ```
 
 특정 키값만 잘 가지고 오는 것을 확인해 볼 수 있다.
