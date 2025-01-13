@@ -95,7 +95,7 @@ Parameter store의 주요 장점은 다음과 같다.
     ]
 }
 ```
-`REGION`과 `ACCOUNT-ID`에는 실제 값으로 작성해야 한다. `Resource ARN`에 와일드카드를 사용하여 `parameter/test/spring` 경로로 시작하는 모든 파라미터를 조회할 수 있게 될 것이다.
+`REGION`과 `ACCOUNT-ID`에는 실제 값으로 작성해야 한다. `Resource ARN`에 와일드카드를 사용하여 `/test/spring` 경로로 시작하는 모든 파라미터를 조회할 수 있게 될 것이다.
 
 [참고 자료](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-access.html)
 
